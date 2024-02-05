@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% load menu_tags %}
+
+{% block content %}
+  {% for menu in menus %}
+    <h1>{{ menu.title }}</h1>
+    {% draw_menu menu current_path %}
+  {% endfor %}
+{% endblock %}
